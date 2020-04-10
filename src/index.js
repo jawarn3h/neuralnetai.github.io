@@ -116,7 +116,7 @@ window.addEventListener('mouseup', e => {
 	isWriting = false;
 	raw_matrix = parseGrid();
 	// Predict with model.
-	console.log(predict(raw_matrix));
+	predict(raw_matrix).print();
 });
 
 // TensorFlow.js stuff. //
