@@ -123,7 +123,7 @@ window.addEventListener('mouseup', e => {
 
 // Load MNIST_Model...
 
-const model = null;
+let model = null;
 
 async function loadNeuralNet() {
 	model = await tf.loadLayersModel('https://neuralnetai.github.io/models/tfjs_files/model.json');
