@@ -119,12 +119,12 @@ window.addEventListener('mouseup', e => {
 	console.log(predict(raw_matrix));
 });
 
-// TensorFlow.js stuff.
+// TensorFlow.js stuff. //
 
 // Load MNIST_Model...
 
 async function loadNeuralNet() {
-	const model = tf.loadModel('../models/tfjs_files/model.json');
+	const model = await tf.loadLayersModel('https://neuralnetai.github.io/models/tfjs_files/model.json');
 }
 // Parses our grid into a matrix so we can then convert to a tensor.
 let parseGrid = () => {
