@@ -123,8 +123,10 @@ window.addEventListener('mouseup', e => {
 
 // Load MNIST_Model...
 
+const model = null;
+
 async function loadNeuralNet() {
-	const model = await tf.loadLayersModel('https://neuralnetai.github.io/models/tfjs_files/model.json');
+	model = await tf.loadLayersModel('https://neuralnetai.github.io/models/tfjs_files/model.json');
 }
 // Parses our grid into a matrix so we can then convert to a tensor.
 let parseGrid = () => {
