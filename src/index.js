@@ -147,7 +147,8 @@ let parseGrid = () => {
 }
 
 let predict = (r) => {
-	tensor = tf.tensor(r, [28, 28],  'float32');
+	tensor = tf.tensor(r, [28, 28, 1],  'float32');
+	tensor = tf.expandDims(tensor, 0);
 	return model.predict(tensor);
 }; 
 loadNeuralNet();
